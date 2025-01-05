@@ -1,0 +1,33 @@
+.navbar.navbar-header { /* Add specificity by combining classes */
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 0 1rem !important;
+    background-color: --red !important;
+}
+
+.navbar-header .navbar-brand {
+    margin-left: 0 !important; /* Override Bootstrap's margin-left */
+    font-weight: bold;
+}
+
+.navbar-header .navbar-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end !important;
+    font-weight: bold !important;
+}
+
+.navbar-header .navbar-text {
+    margin-right: 1rem !important;
+    
+}
+
+.navbar-header .navbar-bold-text {
+    font-weight: bold;
+
+}
+
+.navbar-brand {
+    padding-left: 2.5rem;
+}

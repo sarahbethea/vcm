@@ -1,0 +1,99 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-gray: #D3D3D3;
+    --red: #5D001E;
+    --gray: #cfcfcf; 
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--black); 
+
+    background-image: url("../images/chalkboard.png"); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+
+    background-color: rgba(255, 255, 255, 0.85); 
+    background-blend-mode: overlay; 
+}
+
+
+
+.navbar {
+    background-color: var(--red) !important;
+    color: var(--white) !important;
+}
+
+.navbar-brand,
+.navbar-text,
+.nav-link {
+    color: var(--white) !important;
+}
+
+.navbar-link:hover {
+    color: var(--light-gray) !important;
+}
+
+
+.btn-primary {
+    background-color: var(--red) !important;
+    border-color: var(--red) !important;
+    color: var(--white) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--black) !important;
+    border-color: var(--black) !important;
+}
+
+.btn-secondary {
+    background-color: var(--gray) !important;
+    border-color: var(--gray) !important;
+    color: var(--white) !important;
+}
+
+.btn-secondary:hover {
+    background-color: var(--black) !important;
+    border-color: var(--black) !important;
+}
+
+.card-title {
+    color: var(--black);
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.content {
+    flex: 1; 
+}
+
+
+.footer {
+    background-color: var(--gray);
+    color: var(--white);
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    position: relative; 
+    margin-top: 3rem;
+}
+
