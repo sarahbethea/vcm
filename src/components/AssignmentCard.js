@@ -37,7 +37,7 @@ export default function AssignmentCard({ assignment, onAssignmentAction, classId
     const handleMarkComplete = () => {
       const updatedCompletion = !isCompleted;
       setIsCompleted(updatedCompletion);
-      onAssignmentAction(assignment.id, "markComplete", { isCompleted: updatedCompletion }); //passes the assignment id, the action type, and boolean value indiciating if the user is in completedBy yet or not
+      onAssignmentAction(assignment.id, "markComplete", { isCompleted: updatedCompletion }); 
     };
 
     const handleInputChange = (e) => {
@@ -49,9 +49,9 @@ export default function AssignmentCard({ assignment, onAssignmentAction, classId
     };
 
     const handleFormSubmit = (e) => {
-      e.preventDefault(); // Prevent default form submission behavior
-      onAssignmentAction(assignment.id, "editAssignment", updatedAssignment); // Pass updatedAssignment to save logic
-      handleClose(); // Close the modal
+      e.preventDefault(); 
+      onAssignmentAction(assignment.id, "editAssignment", updatedAssignment); 
+      handleClose();
     };
 
     const handleDelete = () => {
@@ -77,7 +77,7 @@ export default function AssignmentCard({ assignment, onAssignmentAction, classId
                     type="checkbox"
                     id={`mark-complete-${assignment.id}`}
                     label="Mark as Complete"
-                    checked={isCompleted} //sync with local state
+                    checked={isCompleted} 
                     onChange={handleMarkComplete}
                 />
             ) : (

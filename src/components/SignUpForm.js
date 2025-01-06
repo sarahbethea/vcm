@@ -24,7 +24,7 @@ export default function SignUpForm({
     const [ errors, setErrors ] = useState({});
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault(); 
         const newErrors = {};
 
         if (!firstName.trim()) newErrors.firstName = "First name is required.";
@@ -38,7 +38,7 @@ export default function SignUpForm({
         }
 
         setErrors({});
-        onSignUp(firstName, lastName, role, email, password); // Call the parent function to handle sign-up logic
+        onSignUp(firstName, lastName, role, email, password); 
         navigate("/");
     };
 

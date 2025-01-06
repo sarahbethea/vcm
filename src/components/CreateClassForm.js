@@ -18,12 +18,11 @@ export default function CreateClassForm({ teacherId, handleCreateClass }) {
         
 
     }
-    //go over this again, what the hell is up with the "name aspect", and why do we have custom name in props of compnent?
-
+  
     const handleSubmit = (e) => {
         e.preventDefault();
         handleCreateClass(formData);
-        setFormData({name: "", description: "", teacherId, students: []}) //reset form values after submission
+        setFormData({name: "", description: "", teacherId, students: []}) 
     }
 
 

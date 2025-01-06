@@ -121,7 +121,6 @@ export default function StudentDashboard({ selectedClass }) {
 
     const handleUnenroll = async (classId) => {
         try {
-            // Fetch current user data
             const userResponse = await fetch(`${API_URL}/users/${user.id}`);
             if (!userResponse.ok) {
                 throw new Error("Failed to fetch user details");
@@ -129,12 +128,10 @@ export default function StudentDashboard({ selectedClass }) {
 
             const userData = await userResponse.json();
 
-            // Filter out the class to unenroll
             const updatedEnrolledClasses = userData.enrolledClasses.filter(
                 (id) => id !== classId
             );
 
-            // Update the user's enrolled classes in the API
             const updateUserResponse = await fetch(`${API_URL}/users/${user.id}`, {
                 method: "PUT",
                 headers: {
@@ -153,7 +150,7 @@ export default function StudentDashboard({ selectedClass }) {
             const updatedUser = await updateUserResponse.json();
             updateUser(updatedUser);
 
-            // Optionally update the class's `students` array
+ 
             const classResponse = await fetch(`${API_URL}/classes/${classId}`);
             if (classResponse.ok) {
                 const classData = await classResponse.json();
@@ -174,7 +171,6 @@ export default function StudentDashboard({ selectedClass }) {
             }
 
 
-            // Update local state
             setEnrolledClasses((prev) =>
                 prev.filter((classItem) => classItem.id !== classId)
             );

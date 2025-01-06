@@ -20,7 +20,6 @@ export default function ClassCard({ classId, handleDeleteClass, handleEditClass,
   useEffect(() => {
     const getClassDetails = async () => {
       try {
-        // Fetch the specific class directly
         const classResponse = await fetch(`${API_URL}/classes/${classId}`);
         if (!classResponse.ok) {
           console.error("Class not found");
@@ -31,7 +30,6 @@ export default function ClassCard({ classId, handleDeleteClass, handleEditClass,
         setClassName(myClass.name || "No name provided");
         setClassDescription(myClass.description || "No description available");
 
-        // Fetch teacher details
         const teacherResponse = await fetch(`${API_URL}/users/${myClass.teacherId}`);
         if (teacherResponse.ok) {
           const teacherData = await teacherResponse.json();
@@ -72,9 +70,9 @@ export default function ClassCard({ classId, handleDeleteClass, handleEditClass,
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); 
     handleEditClass(classId, updatedClass);
-    handleClose(); // Close the modal
+    handleClose(); 
     setClassName(updatedClass.name);
     setClassDescription(updatedClass.description);
   };

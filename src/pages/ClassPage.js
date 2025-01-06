@@ -68,8 +68,6 @@ export default function ClassPage() {
 
 
 
-    //now handle onAssignmentAction for edit assignment button and check mark 
-
     const handleAssignmentAction = async (assignmentId, actionType, assignmentData=null) => {
         try {
             if (actionType === "markComplete") {
@@ -122,8 +120,7 @@ export default function ClassPage() {
                             a.id === updatedAssignment.id 
                             ? updatedAssignment
                             : a
-                        )
-                        // We update currentAssignments state by mapping over the current assignments, and saying " if this assignment has id that matches the updated assignemtns id, then replace it with updated assignemtn, otherwise keep it the same assignment" 
+                        ) 
                     );
                 }
             }
